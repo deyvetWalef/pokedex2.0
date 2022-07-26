@@ -88,11 +88,12 @@ body {
   font-weight: 600;
   color: #555;
   line-height: 1.2em;
+  text-transform: uppercase;
 }
 
 .card .details h2 span {
   font-size: 0.75em;
-  font-weight: 500;
+  font-weight: 00;
   opacity: 0.5;
 }
 
@@ -115,22 +116,10 @@ body {
   opacity: 0.5;
 }
 
-.form {
-  width: 65%;
-  top: 65%;
-  left: 13.5%;
-}
-
-.input__search {
-  width: 100%;
-  padding: 4%;
-  outline: none;
-  border: 2px solid #333;
-  border-radius: 5px;
-  font-weight: 600;
-  color: #3a444d;
-  font-size: clamp(8px, 5vw, 1rem);
-  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+.pokemon__number{
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.5;
 }
 
 .card .details .actionBtn {
@@ -169,4 +158,12 @@ body {
 
 .card .details .actionBtn button:nth-child(2):hover {
   background: #e2350d;
+}
+
+.fighting {
+	background-color: #E6E0D4;
+}
+
+.normal {
+	background-color: #F5F5F5;
 }
