@@ -12,9 +12,9 @@
     <title>Pokedex 2.0</title>
   </head>
   <body>
-    <div class="card">
+    <div class="card" >
       <div class="imgBx">
-        <img src="#" alt="pokemon" id="pokemon__image" class="pokemon__image" />
+        <img src="#" alt="pokemon" id="pokemon__image" class="pokemon__image"  />
       </div>
       <div class="content">
         <div class="details">
@@ -23,24 +23,26 @@
             <h2 class="pokemon__number"><br /></h2>
           </h2>
           <div class="data">
+            <form class="form">
+              <input
+                type="search"
+                class="input__search"
+                placeholder="Name or Number"
+                required
+              />
+              <span class="border-bottom"></span>
+            </form>
             <h3 class="pokemon__type"><br /></h3>
-            <h3 class="pokemon__description"><br /></h3>
+            <h3 class="pokemon__description" onclick="description()"<br /></h3>
           </div>
           <div class="actionBtn">
             <button id="btn-prev" class="button btn-prev">ANTERIOR</button>
             <button id="btn-next" class="button btn-next">PRÓXIMO</button>
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <form class="form">
-      <input
-        type="search"
-        class="input__search"
-        placeholder="Name or Number"
-        required
-      />
-    </form>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

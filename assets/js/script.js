@@ -3,6 +3,8 @@ const pokemonNumber = document.querySelector(".pokemon__number");
 const pokemonImage = document.querySelector(".pokemon__image");
 const pokemonTypes = document.querySelector(".pokemon__type");
 const pokemonDescription = document.querySelector(".pokemon__description");
+const buttonInfo = document.querySelector('.btn-info');
+
 var s;
 
 const form = document.querySelector(".form");
@@ -34,12 +36,12 @@ const renderPokemon = async (pokemon) => {
     pokemonImage.style.display = "block";
     pokemonName.innerHTML = data.name;
     pokemonNumber.innerHTML = data.id;
+    pokemonDescription.innerText = data.description;
     pokemonTypes.innerHTML = data.types
       .map((typeInfo) => typeInfo.type.name)
       .join(" | ");
-    console.log(pokemonTypes);
-    console.log(pokemon.Types);
 
+    //Removendo o segundo type para usar css variados:
     s = pokemonTypes.innerHTML;
     console.log(s);
 
@@ -142,12 +144,28 @@ buttonPrev.addEventListener("click", () => {
   if (searchPokemon > 1) {
     searchPokemon -= 1;
     renderPokemon(searchPokemon);
+    pokemonDescription.innerText ="";
   }
 });
 
 buttonNext.addEventListener("click", () => {
   searchPokemon += 1;
+  pokemonDescription.innerText ="";
   renderPokemon(searchPokemon);
 });
+
+async function description(){
+  if(pokemonDescription.innerText.length == 0) {
+
+    pokemonImage.style.display = 'none';
+    const APIDes = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonNumber.innerText}`);
+    const dataDes = await APIDes.json();
+    pokemonDescription.innerText = dataDes.flavor_text_entries[7].flavor_text; 
+  }else if(pokemonDescription.innerText.length >0){
+    pokemonImage.style.display = 'unset';
+    pokemonDescription.innerText ="";
+  }
+
+}
 
 renderPokemon(searchPokemon);

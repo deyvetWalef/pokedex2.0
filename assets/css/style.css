@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
   font-family: "Oswald", sans-serif;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 body {
@@ -100,7 +103,7 @@ body {
 .card .details .data {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 2px 0;
 }
 
 .card .details .data h3 {
@@ -116,20 +119,20 @@ body {
   opacity: 0.5;
 }
 
-.pokemon__number{
+.pokemon__number {
   font-size: 0.85em;
   font-weight: 400;
   opacity: 0.5;
 }
 
 .card .details .actionBtn {
-  display: flex;
   justify-content: space-between;
   gap: 10px;
 }
 
 .card .details .actionBtn button {
   padding: 10px 30px;
+  margin-top: 40px;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -160,10 +163,3 @@ body {
   background: #e2350d;
 }
 
-.fighting {
-	background-color: #E6E0D4;
-}
-
-.normal {
-	background-color: #F5F5F5;
-}
