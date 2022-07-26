@@ -14,22 +14,33 @@
   <body>
     <div class="card">
       <div class="imgBx">
-        <img src="./assets/image/001.png" />
+        <img src="#" alt="pokemon" class="pokemon__image" />
       </div>
       <div class="content">
         <div class="details">
-          <h2>Bulbasaur<br /><span>Tipo: Planta/Veneno</span></h2>
+          <h2 class="pokemon__name">
+            <br /><span class="pokemon__number"></span>
+          </h2>
           <div class="data">
             <h3>0,7 m<br /><span>Altura</span></h3>
             <h3>6,9 kg<br /><span>Peso</span></h3>
             <h3>Planta/Veneno<br /><span>Tipo</span></h3>
           </div>
+          <form class="form">
+            <input
+              type="search"
+              class="input__search"
+              placeholder="Name or Number"
+              required
+            />
+          </form>
           <div class="actionBtn">
-            <button>ANTERIOR</button>
-            <button>PRÓXIMO</button>
+            <button class="button btn-prev">ANTERIOR</button>
+            <button class="button btn-next">PRÓXIMO</button>
           </div>
         </div>
       </div>
     </div>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
