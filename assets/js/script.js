@@ -2,6 +2,7 @@ const pokemonName = document.querySelector(".pokemon__name");
 const pokemonNumber = document.querySelector(".pokemon__number");
 const pokemonImage = document.querySelector(".pokemon__image");
 const pokemonTypes = document.querySelector(".pokemon__type");
+const modal = document.querySelector(".modal-container");
 
 var s;
 
@@ -185,3 +186,11 @@ buttonNext.addEventListener("click", () => {
 });
 
 renderPokemon(searchPokemon);
+
+function openModal() {
+  modal.classList.add("active");
+}
+
+function closeModal() {
+  modal.classList.remove("active");
+}
