@@ -81,29 +81,42 @@ const renderPokemon = async (pokemon) => {
         "silver";
       document.getElementById("btn-prev").style.backgroundColor = "silver";
       document.getElementById("btn-next").style.backgroundColor = "silver";
+      document.getElementById("form").style.backgroundColor = "silver";
+      document.getElementById("search-btn").style.backgroundColor = "silver";
     } else if (s == "ground") {
       document.getElementById("pokemon__image").style.backgroundColor = "wheat";
       document.getElementById("btn-prev").style.backgroundColor = "wheat";
       document.getElementById("btn-next").style.backgroundColor = "wheat";
+      document.getElementById("form").style.backgroundColor = "wheat";
+      document.getElementById("search-btn").style.backgroundColor = "wheat";
     } else if (s == "rock") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "DarkGray";
       document.getElementById("btn-prev").style.backgroundColor = "DarkGray";
       document.getElementById("btn-next").style.backgroundColor = "DarkGray";
+      document.getElementById("form").style.backgroundColor = "DarkGray";
+      document.getElementById("search-btn").style.backgroundColor = "DarkGray";
     } else if (s == "fairy") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "Purple";
       document.getElementById("btn-prev").style.backgroundColor = "Purple";
       document.getElementById("btn-next").style.backgroundColor = "Purple";
+      document.getElementById("form").style.backgroundColor = "Purple";
+      document.getElementById("search-btn").style.backgroundColor = "Purple";
     } else if (s == "poison") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "DarkMagenta";
       document.getElementById("btn-prev").style.backgroundColor = "DarkMagenta";
       document.getElementById("btn-next").style.backgroundColor = "DarkMagenta";
+      document.getElementById("form").style.backgroundColor = "DarkMagenta";
+      document.getElementById("search-btn").style.backgroundColor =
+        "DarkMagenta";
     } else if (s == "bug") {
       document.getElementById("pokemon__image").style.backgroundColor = "Tan";
       document.getElementById("btn-prev").style.backgroundColor = "Tan";
       document.getElementById("btn-next").style.backgroundColor = "Tan";
+      document.getElementById("form").style.backgroundColor = "Tan";
+      document.getElementById("search-btn").style.backgroundColor = "Tan";
     } else if (s == "dragon") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "MediumPurple";
@@ -111,24 +124,36 @@ const renderPokemon = async (pokemon) => {
         "MediumPurple";
       document.getElementById("btn-next").style.backgroundColor =
         "MediumPurple";
+      document.getElementById("form").style.backgroundColor = "MediumPurple";
+      document.getElementById("search-btn").style.backgroundColor =
+        "MediumPurple";
     } else if (s == "psychic") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "HotPink";
       document.getElementById("btn-prev").style.backgroundColor = "HotPink";
       document.getElementById("btn-next").style.backgroundColor = "HotPink";
+      document.getElementById("form").style.backgroundColor = "HotPink";
+      document.getElementById("search-btn").style.backgroundColor = "HotPink";
     } else if (s == "flying") {
       document.getElementById("pokemon__image").style.backgroundColor = "Plum";
       document.getElementById("btn-prev").style.backgroundColor = "Plum";
       document.getElementById("btn-next").style.backgroundColor = "Plum";
+      document.getElementById("form").style.backgroundColor = "Plum";
+      document.getElementById("search-btn").style.backgroundColor = "Plum";
     } else if (s == "fighting") {
       document.getElementById("pokemon__image").style.backgroundColor = "red";
       document.getElementById("btn-prev").style.backgroundColor = "red";
       document.getElementById("btn-next").style.backgroundColor = "red";
+      document.getElementById("form").style.backgroundColor = "red";
+      document.getElementById("search-btn").style.backgroundColor = "red";
     } else if (s == "normal") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "OldLace";
       document.getElementById("btn-prev").style.backgroundColor = "NavajoWhite";
       document.getElementById("btn-next").style.backgroundColor = "NavajoWhite";
+      document.getElementById("form").style.backgroundColor = "NavajoWhite";
+      document.getElementById("search-btn").style.backgroundColor =
+        "NavajoWhite";
     }
     pokemonImage.src =
       data["sprites"]["other"]["official-artwork"]["front_default"];
