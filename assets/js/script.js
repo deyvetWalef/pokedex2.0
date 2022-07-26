@@ -49,6 +49,8 @@ const renderPokemon = async (pokemon) => {
         "yellow";
       document.getElementById("btn-prev").style.backgroundColor = "yellow";
       document.getElementById("btn-next").style.backgroundColor = "yellow";
+      document.getElementById("form").style.backgroundColor = "yellow";
+      document.getElementById("search-btn").style.backgroundColor = "yellow";
     } else if (s == "grass") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "MediumSeaGreen";
@@ -56,16 +58,24 @@ const renderPokemon = async (pokemon) => {
         "MediumSeaGreen";
       document.getElementById("btn-next").style.backgroundColor =
         "MediumSeaGreen";
+      document.getElementById("form").style.backgroundColor = "MediumSeaGreen";
+      document.getElementById("search-btn").style.backgroundColor =
+        "MediumSeaGreen";
     } else if (s == "fire") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "DarkOrange";
       document.getElementById("btn-prev").style.backgroundColor = "DarkOrange";
       document.getElementById("btn-next").style.backgroundColor = "DarkOrange";
+      document.getElementById("form").style.backgroundColor = "DarkOrange";
+      document.getElementById("search-btn").style.backgroundColor =
+        "DarkOrange";
     } else if (s == "water" || s == "ice") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "SkyBlue";
       document.getElementById("btn-prev").style.backgroundColor = "SkyBlue";
       document.getElementById("btn-next").style.backgroundColor = "SkyBlue";
+      document.getElementById("form").style.backgroundColor = "SkyBlue";
+      document.getElementById("search-btn").style.backgroundColor = "SkyBlue";
     } else if (s == "steel") {
       document.getElementById("pokemon__image").style.backgroundColor =
         "silver";
