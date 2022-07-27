@@ -2,7 +2,7 @@ const pokemonName = document.querySelector(".pokemon__name");
 const pokemonNumber = document.querySelector(".pokemon__number");
 const pokemonImage = document.querySelector(".pokemon__image");
 const pokemonTypes = document.querySelector(".pokemon__type");
-const modal = document.querySelector(".modal-container");
+const pokemonDescription = document.querySelector(".pokemon_description");
 
 var s;
 
@@ -177,20 +177,28 @@ buttonPrev.addEventListener("click", () => {
   if (searchPokemon > 1) {
     searchPokemon -= 1;
     renderPokemon(searchPokemon);
+    pokemonDescription.innerText = "";
   }
 });
 
 buttonNext.addEventListener("click", () => {
   searchPokemon += 1;
+  pokemonDescription.innerText = "";
   renderPokemon(searchPokemon);
 });
 
+async function description() {
+  if (pokemonDescription.innerText.length == 0) {
+    pokemonImage.style.display = "none";
+    const APIDes = await fetch(
+      `https://pokeapi.co/api/v2/pokemon-species/${pokemonNumber.innerText}`
+    );
+    const dataDes = await APIDes.json();
+    pokemonDescription.innerText = dataDes.flavor_text_entries[7].flavor_text;
+  } else if (pokemonDescription.innerText.length > 0) {
+    pokemonImage.style.display = "unset";
+    pokemonDescription.innerText = "";
+  }
+}
+
 renderPokemon(searchPokemon);
-
-function openModal() {
-  modal.classList.add("active");
-}
-
-function closeModal() {
-  modal.classList.remove("active");
-}
